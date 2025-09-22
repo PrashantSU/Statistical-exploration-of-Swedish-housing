@@ -1,21 +1,51 @@
-# Statistical Analysis of Housing Market Data in Stockholm
+# 🏡 Statistical Analysis of Stockholm Housing Market  
 
-📊 A statistical exploration of Swedish housing data using **R**.  
-This project investigates price distributions, housing types across regions, 
-and regression modeling to understand key drivers of housing prices.  
+This project presents a **statistical analysis of housing market data in Stockholm**, focusing on factors that influence housing prices such as **area, region, type, balcony, and rooms**.  
 
----
-
-## 🔍 Project Overview
-- **Data**: Swedish housing dataset (contains price, type, region, size, etc.)  
-- **Techniques**:  
-  - Exploratory Data Analysis (EDA)  
-  - Descriptive statistics & visualizations  
-  - Hypothesis testing  
-  - Linear regression modeling  
-- **Goal**: Demonstrate statistical reasoning and R coding through 
-a reproducible analysis.  
+The analysis was carried out in **R** using packages like `dplyr`, `mosaic`, and `DescTools`.  
 
 ---
 
+## 📂 Dataset  
+- **File:** `dataset03.xlsx`  
+- **Variables:**  
+  - `STARTING_PRICE` – starting price of housing units  
+  - `REGION` – geographic location (Stockholm, Northwest, Northeast, etc.)  
+  - `TYPE` – housing type (apartment, villa, etc.)  
+  - `BALCONY` – presence of a balcony (Yes/No)  
+  - `ROOMS` – number of rooms  
+  - `AREA` – size of the property (in square meters)  
 
+---
+
+## 🔍 Analysis Overview  
+
+### 1. Descriptive Statistics  
+- Mean starting price: **4,273,799 SEK**  
+- Median: **3,495,000 SEK**  
+- Skewness: **2.06 (right-skewed)**  
+- Outliers: **32 properties** above 9,495,000 SEK  
+
+📊 Histogram & boxplot reveal heavy right-tail distribution.  
+
+---
+
+### 2. Housing Type by Region  
+- Apartments dominate in **all regions**, especially in **Stockholm** and **Northwest**.  
+
+---
+
+### 3. Area by Region  
+- **Northeast** → highest mean & median housing area  
+- **Stockholm** → smaller, more uniform housing sizes  
+
+---
+
+### 4. Correlation: Area vs Price  
+- Pearson’s correlation coefficient: **0.62** → moderate positive relationship  
+
+---
+
+### 5. Regression Models  
+
+#### 📈 Simple Linear Regression  
